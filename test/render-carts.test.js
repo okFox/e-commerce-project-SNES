@@ -17,7 +17,7 @@ test('compare html to rendered', function(assert) {
         price: 100.00,
         cost: 75.00
     };
-    const expected = '<li class="adventure" title="The greatest SNES game of all time."><h3>Shadowrun SNES</h3><img src="../assets/shadowrun.jpg" alt="Shadowrun SNES image"><p class="price">$100.00<button value="undefined">Add</button></p></li>';
+    const expected = '<li class="adventure" title="The greatest SNES game of all time."><h3>Shadowrun SNES</h3><img src="../assets/shadowrun.jpg" alt="Shadowrun SNES image"><p class="price">$100.00<button value="shadowrun">Add to Cart</button></p></li>';
     //Act 
     // Call the function you're testing and set the result to a const
     const dom = renderCarts(shadowrun);

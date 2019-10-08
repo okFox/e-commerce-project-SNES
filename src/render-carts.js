@@ -24,8 +24,8 @@ function renderCarts(cartList) {
     p.textContent = usd;
     
     const button = document.createElement('button');
-    button.textContent = 'Add';
-    button.value = cartList.code;
+    button.textContent = 'Add to Cart';
+    button.value = cartList.id;
     p.appendChild(button);
 
     li.appendChild(p);
