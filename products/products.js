@@ -1,5 +1,5 @@
 import cartList from './data/carts.js';
-import renderCarts from './src/render-carts.js';
+import renderCarts from './render-carts.js';
 
 
 
