@@ -7,7 +7,7 @@ import gameList from '../data/games.js';
 
 const test = QUnit.test;
 
-test('ID of data array matches customer purchase array', function(assert) {
+test('find by id in array', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const id = 'shadowrun';
@@ -20,4 +20,16 @@ test('ID of data array matches customer purchase array', function(assert) {
     //Assert
     // Make assertions about what is expected valid result
     assert.equal(foundGame.id, expected);
+});
+
+test('find product by id returns null if not found', assert => {
+    // arrange
+    const id = 'not found';
+    const expected = null;
+
+    // act
+    const foundGame = findById(gameList, id);
+
+    // assert
+    assert.equal(foundGame, expected);
 });
