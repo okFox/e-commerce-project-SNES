@@ -1,4 +1,4 @@
-
+//makes list of games, add buttons,  and generates product.html page
 function renderGames(gameList) {
     const li = document.createElement('li');
     li.className = gameList.category;
@@ -17,10 +17,6 @@ function renderGames(gameList) {
     p.className = 'price';
 
     const usd = '$' + gameList.price.toFixed(2);
-    // const usd = fruit.price.toLocaleString('en-US', { 
-    //     style: 'currency', 
-    //     currency: 'USD' 
-    // });
     p.textContent = usd;
     
     const button = document.createElement('button');

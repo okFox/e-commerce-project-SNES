@@ -23,7 +23,7 @@ export function toUSD(number) {
 }
 
 // but whyyyyyyyy?
-function roundCurrency(amount) {
+export function roundCurrency(amount) {
     return Math.round(amount * 100) / 100;
 }
 
@@ -31,4 +31,17 @@ function roundCurrency(amount) {
 export function calcLineTotal(quantity, price) {
     const amount = quantity * price;
     return roundCurrency(amount);
+}
+
+//going through each line of customer order and adding totals
+export function calcOrderTotal(fullCartData, gameList){
+    let orderTotal = 0;
+
+    for (let i = 0; i < fullCartData.length; i++){   
+        const eachLine = fullCartData[i];
+        const game = findById(gameList, eachLine.id);
+        const lineTotal = calcLineTotal(eachLine.quantity, game.price);
+        orderTotal += lineTotal;
+    }
+    return roundCurrency(orderTotal);
 }
