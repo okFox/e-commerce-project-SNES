@@ -1,5 +1,6 @@
 import renderGames from '../products/render-games.js';
 
+
 // IMPORT MODULES under test here:
 // import example from '../src/example.js';
 
@@ -26,3 +27,4 @@ test('compare html to rendered games', function(assert) {
     // Make assertions about what is expected valid result
     assert.equal(html, expected);
 });
+

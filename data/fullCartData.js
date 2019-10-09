@@ -1,6 +1,6 @@
 //an array of items simulating the customer's order
 
-export const fullCartData = [{
+const fullCartData = [{
     id: 'shadowrun',
     quantity: 2
 }, {
@@ -11,3 +11,5 @@ export const fullCartData = [{
     quantity: 1
 
 }];
+
+export default fullCartData;
