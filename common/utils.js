@@ -14,3 +14,21 @@ export function findById(items, id) {
     // if it does not find a match
     return null;
 }
+
+export function toUSD(number) {
+    return number.toLocaleString('en-US', { 
+        style: 'currency', 
+        currency: 'USD' 
+    });
+}
+
+// but whyyyyyyyy?
+function roundCurrency(amount) {
+    return Math.round(amount * 100) / 100;
+}
+
+
+export function calcLineTotal(quantity, price) {
+    const amount = quantity * price;
+    return roundCurrency(amount);
+}

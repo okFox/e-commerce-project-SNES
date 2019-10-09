@@ -1,4 +1,4 @@
-import { findById } from '../common/utils.js';
+import { findById, calcLineTotal, toUSD } from '../common/utils.js';
 import fullCartData from '../data/fullCartData.js';
 import gameList from '../data/games.js';
 
@@ -32,4 +32,17 @@ test('find product by id returns null if not found', assert => {
 
     // assert
     assert.equal(foundGame, expected);
+});
+
+test('calculating line item total', assert => {
+    // arrange
+    const qty = 5;
+    const price = 10;
+    const expected = 50;
+
+    // act
+    const orderTotal = calcLineTotal(qty, price);
+
+    // assert
+    assert.equal(orderTotal, expected);
 });
