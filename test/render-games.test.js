@@ -1,11 +1,11 @@
-import renderCarts from '../src/render-carts.js';
+import renderGames from '../products/render-games.js';
 
 // IMPORT MODULES under test here:
 // import example from '../src/example.js';
 
 const test = QUnit.test;
 
-test('compare html to rendered', function(assert) {
+test('compare html to rendered games', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const shadowrun = {
@@ -20,7 +20,7 @@ test('compare html to rendered', function(assert) {
     const expected = '<li class="adventure" title="The greatest SNES game of all time."><h3>Shadowrun SNES</h3><img src="../assets/shadowrun.jpg" alt="Shadowrun SNES image"><p class="price">$100.00<button value="shadowrun">Add to Cart</button></p></li>';
     //Act 
     // Call the function you're testing and set the result to a const
-    const dom = renderCarts(shadowrun);
+    const dom = renderGames(shadowrun);
     const html = dom.outerHTML;
     //Assert
     // Make assertions about what is expected valid result

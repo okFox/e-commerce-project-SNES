@@ -1,1 +1,1 @@
-import './render-carts.test.js';
+import './render-games.test.js';

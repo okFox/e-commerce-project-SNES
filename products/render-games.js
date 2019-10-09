@@ -1,22 +1,22 @@
 
-function renderCarts(cartList) {
+function renderGames(gameList) {
     const li = document.createElement('li');
-    li.className = cartList.category;
-    li.title = cartList.description;
+    li.className = gameList.category;
+    li.title = gameList.description;
 
     const h3 = document.createElement('h3');
-    h3.textContent = cartList.name;
+    h3.textContent = gameList.name;
     li.appendChild(h3);
 
     const img = document.createElement('img');
-    img.src = '../assets/' + cartList.image;
-    img.alt = cartList.name + ' image';
+    img.src = '../assets/' + gameList.image;
+    img.alt = gameList.name + ' image';
     li.appendChild(img);
 
     const p = document.createElement('p');
     p.className = 'price';
 
-    const usd = '$' + cartList.price.toFixed(2);
+    const usd = '$' + gameList.price.toFixed(2);
     // const usd = fruit.price.toLocaleString('en-US', { 
     //     style: 'currency', 
     //     currency: 'USD' 
@@ -25,7 +25,7 @@ function renderCarts(cartList) {
     
     const button = document.createElement('button');
     button.textContent = 'Add to Cart';
-    button.value = cartList.id;
+    button.value = gameList.id;
     p.appendChild(button);
 
     li.appendChild(p);
@@ -33,4 +33,4 @@ function renderCarts(cartList) {
     return li;
 }
 
-export default renderCarts; 
+export default renderGames; 

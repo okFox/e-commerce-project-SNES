@@ -1,10 +1,5 @@
 //an array of items simulating the customer's order
 
-
-
-
-
-
 export const fullCartData = [{
     id: 'shadowrun',
     quantity: 2
