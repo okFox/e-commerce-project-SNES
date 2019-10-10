@@ -1,3 +1,5 @@
+import { findById } from '../common/utils.js';
+
 //makes list of games, add buttons,  and generates product.html page
 function renderGames(gameList) {
     const li = document.createElement('li');
@@ -22,8 +24,43 @@ function renderGames(gameList) {
     const button = document.createElement('button');
     button.textContent = 'Add to Cart';
     button.value = gameList.id;
-    p.appendChild(button);
 
+ ///add event listener
+    button.addEventListener('click', () => {
+//checks local storage to see if a basket-in-use already exists
+        let json = localStorage.getItem('working-basket');
+        let basket;
+//if a basket is in storage, parse it back to an array
+        if (json) {
+            basket = JSON.parse(json);
+        }
+        else {
+            basket = [];
+        }
+//make an array with gameid and qty of 1 using findById to match against gamesList data
+        let gameInBasket = findById(gameList.id, basket);
+//if this game is not in the basket add it with a qty of 1
+        if (!gameInBasket) {
+            gameInBasket = {
+                id: gameList.id,
+                quantity: 1
+            };
+// .push adds this game/qty pair to array basket
+            basket.push(gameInBasket);
+        } else {
+//if it is already there, increment qty by 1
+            gameInBasket.quantity++;
+        }
+
+//stringify basket and save to local storage
+
+        json = JSON.stringify(basket);
+        localStorage.setItem(basket, json);
+//check to see if this works properly
+        alert('1 ' + gameList.id + ' added to basket');
+    });
+   
+    p.appendChild(button);
     li.appendChild(p);
 
     return li;
