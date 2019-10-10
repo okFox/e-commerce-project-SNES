@@ -1,4 +1,4 @@
-
+import { findById, calcLineTotal } from '../common/utils.js';
 import gameList from '../data/games.js';
 
 // IMPORT MODULES under test here:
