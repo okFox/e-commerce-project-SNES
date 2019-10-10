@@ -28,10 +28,10 @@ const marioKart = {
     cost: 25.00
 };
 
-const cartList = [
+const gameList = [
     shadowrun,
     secretOfMana,
     marioKart
 ];
 
-export default cartList;
+export default gameList;

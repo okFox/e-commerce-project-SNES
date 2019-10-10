@@ -1,12 +1,12 @@
-import cartList from './data/carts.js';
-import renderCarts from './render-carts.js';
+import gameList from '../data/games.js';
+import renderGames from './render-games.js';
 
 
 
-const list = document.getElementById('carts');
+const list = document.getElementById('games');
 
-for (let i = 0; i < cartList.length; i++) {
-    const cart = cartList[i];
-    const dom = renderCarts(cart);
+for (let i = 0; i < gameList.length; i++) {
+    const games = gameList[i];
+    const dom = renderGames(games);
     list.appendChild(dom);
 }
