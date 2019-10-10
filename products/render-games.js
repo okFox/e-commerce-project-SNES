@@ -47,7 +47,9 @@ function renderGames(gameList) {
             };
 // .push adds this game/qty pair to array basket
             basket.push(gameInBasket);
+
         } else {
+        
 //if it is already there, increment qty by 1
             gameInBasket.quantity++;
         }
@@ -55,7 +57,7 @@ function renderGames(gameList) {
 //stringify basket and save to local storage
 
         json = JSON.stringify(basket);
-        localStorage.setItem(basket, json);
+        localStorage.setItem('working-basket', json);
 //check to see if this works properly
         alert('1 ' + gameList.id + ' added to basket');
     });

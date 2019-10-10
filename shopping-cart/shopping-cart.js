@@ -3,7 +3,7 @@ import renderShoppingCart from './render-shopping-cart.js';
 import gameList from '../data/games.js';
 import { toUSD, findById, calcOrderTotal } from '../common/utils.js';
 
-const placeOrderButton = document.getElementById('place-order-button');
+//const placeOrderButton = document.getElementById('place-order-button');
 
 
 //iterates over fullcartdata and generates line items using rendershoppingcart function
