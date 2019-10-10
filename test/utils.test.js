@@ -1,5 +1,4 @@
-import { findById, calcLineTotal, toUSD } from '../common/utils.js';
-import fullCartData from '../data/fullCartData.js';
+
 import gameList from '../data/games.js';
 
 // IMPORT MODULES under test here:
