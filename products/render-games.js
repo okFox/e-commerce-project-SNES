@@ -38,20 +38,26 @@ function renderGames(gameList) {
             basket = [];
         }
 //make an array with gameid and qty of 1 using findById to match against gamesList data
-        let gameInBasket = findById(gameList.id, basket);
+        let gameInBasket = findById(basket, gameList.id);
 //if this game is not in the basket add it with a qty of 1
         if (!gameInBasket) {
             gameInBasket = {
                 id: gameList.id,
                 quantity: 1
+
             };
+
 // .push adds this game/qty pair to array basket
             basket.push(gameInBasket);
 
         } else {
         
 //if it is already there, increment qty by 1
+
+
             gameInBasket.quantity++;
+
+            
         }
 
 //stringify basket and save to local storage
