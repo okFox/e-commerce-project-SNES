@@ -28,9 +28,9 @@ export function roundCurrency(amount) {
 }
 
 
-export function calcLineTotal(quantity, price) {
-    const amount = quantity * price;
-    return roundCurrency(amount);
+export function calcLineTotal(price, quantity) {
+    const amount = price * quantity;
+    return amount;
 }
 
 //going through each line of customer order and adding totals
@@ -40,8 +40,12 @@ export function calcOrderTotal(fullCartData, gameList){
     for (let i = 0; i < fullCartData.length; i++){   
         const eachLine = fullCartData[i];
         const game = findById(gameList, eachLine.id);
+
         const lineTotal = calcLineTotal(eachLine.quantity, game.price);
+
+        
+
         orderTotal += lineTotal;
     }
-    return roundCurrency(orderTotal);
+    return orderTotal;
 }

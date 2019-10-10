@@ -15,6 +15,8 @@ for (let i = 0; i < fullCartData.length; i++) {
     const game = findById(gameList, lineItem.id);
 
     const dom = renderShoppingCart(game, lineItem);
+    console.log('hi', lineItem);
+    
 
     tbody.appendChild(dom);
 }

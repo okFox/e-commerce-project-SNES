@@ -1,8 +1,9 @@
 
-import { toUSD } from '../common/utils.js';
-import fullCartData from '../data/fullCartData.js';
+import { toUSD, calcLineTotal } from '../common/utils.js';
+
 
 function renderShoppingCart(gameId, cartLineItem) {
+
    
     const tr = document.createElement('tr');
 
@@ -15,6 +16,8 @@ function renderShoppingCart(gameId, cartLineItem) {
     //gets price of game, converts to USD, outputs to DOM
     const priceCell = document.createElement('td');
     priceCell.textContent = toUSD(gameId.price);
+
+    
     tr.appendChild(priceCell);
 
 //gets quantity of game ordered, outputs to DOM
@@ -27,8 +30,16 @@ function renderShoppingCart(gameId, cartLineItem) {
 //calculates line total, converts to USD, outputs to DOM
     const totalCell = document.createElement('td');
     totalCell.className = 'line-total';
-    const thisLineTotal = fullCartData.quantity * gameId.price;
+    const thisLineTotal = calcLineTotal(gameId.price, cartLineItem.quantity);
+    
+    
+
+
+
+
     totalCell.textContent = toUSD(thisLineTotal);
+
+    
     tr.appendChild(totalCell);
 
     return tr;
