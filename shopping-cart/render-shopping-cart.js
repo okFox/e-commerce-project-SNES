@@ -39,9 +39,10 @@ function renderShoppingCart(gameId, cartLineItem) {
 
     totalCell.textContent = toUSD(thisLineTotal);
 
-    
+   
     tr.appendChild(totalCell);
 
     return tr;
 }
+
 export default renderShoppingCart;
