@@ -7,19 +7,23 @@
 }
 
 .hero-box img {
-    height: 250px;
+    height: 225px;
     width: 600px;
     
 }
 .wrapper { 
     display: grid; 
     grid-template-columns: 65% 30%; 
+    grid-template-rows: 35% 70%;
     column-gap: 1em;
     padding: 20px;
 }
 
 .hero-box { 
-    display: flex;
+ 
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 1;
     justify-content: center;
     border-radius: 10px;
     background-color: black;
@@ -29,8 +33,8 @@
     grid-column-start: 2; 
    
     grid-row-start: 1; 
-
-    background-color: aquamarine;
+    grid-row-end: 3;
+    background-color: rgb(204, 204, 204);
 }
 
 section.product-box {
@@ -42,3 +46,16 @@ section.product-box {
   
 }
 
+article.about-text {
+    font-family: 'Raleway', sans-serif; 
+    letter-spacing: 2px;
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 1.8;
+}
+
+#retro-text {
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+}
