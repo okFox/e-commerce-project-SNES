@@ -1,5 +1,7 @@
 body {
-    font-family: 'Raleway', sans-serif;   
+    font-family: 'Raleway', sans-serif; 
+    background: darkgray; 
+
 }
 
 header {
@@ -12,10 +14,10 @@ header {
 }
 
 nav {
-width: 600px;
-display: flex;
-align-items: flex-end;
-justify-content: center;
+    width: 600px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 ul {
@@ -25,7 +27,9 @@ ul {
     justify-content: space-between;
     background: darkgray;
     border-radius: 5px;
+    list-style: none;
 }
+
 .nav-buttons ul {
     display: flex;
     
@@ -36,7 +40,6 @@ ul {
 li {
     color: maroon;
     background: whitesmoke;
-
     padding: 5px;
     border-radius: 5px;
 }
@@ -47,6 +50,28 @@ li {
     border-radius: 100%;
     border: 1px solid black;
     margin: 5px;
-
 }
+
+a:link {
+    text-decoration: none;
+    color: Maroon;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: Maroon;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
+    font-size: 110%;
+  }
+
+  button {
+    cursor:pointer;
+  }
 
