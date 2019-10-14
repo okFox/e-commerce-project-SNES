@@ -11,6 +11,7 @@
     width: 600px;
     
 }
+
 .wrapper { 
     display: grid; 
     grid-template-columns: 65% 30%; 
@@ -68,6 +69,7 @@ article.about-text {
     margin: 5px;
  
 }
+
 .about-box > #logo-aside {
     display: flex;
     justify-content: center;

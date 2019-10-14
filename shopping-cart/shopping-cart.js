@@ -8,8 +8,6 @@ let serializedCheckoutBasket = JSON.parse(checkoutbasket);
 const placeOrderButton = document.getElementById('place-order-button');
 
 
-
-
 //iterates over serializedCheckoutBasket and generates line items using rendershoppingcart function
 
 const tbody = document.querySelector('tbody');
@@ -25,7 +23,6 @@ for (let i = 0; i < serializedCheckoutBasket.length; i++) {
     tbody.appendChild(dom);
 
 }
-
 
 placeOrderButton.addEventListener('click', () => {
     localStorage.removeItem('working-basket');

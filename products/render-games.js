@@ -35,8 +35,7 @@ function renderGames(gameList) {
         let json = localStorage.getItem('working-basket');
         let basket;
         numItemsInCart++;
-
-        
+       
 //if a basket is in storage, parse it back to an array
         if (json) {
             basket = JSON.parse(json);
