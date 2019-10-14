@@ -1,40 +1,77 @@
-img {
-    height: 250px;
-    width: 300px;
-    border-radius: 10px;
-    border: 1px solid black;
+body {
+    font-family: 'Raleway', sans-serif; 
+    background: darkgray; 
+
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    background: grey;
+    height: 150px;
+    border-radius: 5px;
 
-main {
-    font-family: 'Raleway', sans-serif;
-    
-    
 }
 
+nav {
+    width: 600px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
 
 ul {
+    width: 450px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    justify-content: space-between;
+    background: darkgray;
+    border-radius: 5px;
     list-style: none;
 }
 
-h3 {
+.nav-buttons ul {
     display: flex;
-    justify-content: center;
-    background: skyblue;
-    margin: 5px;
+    
+    padding: 10px;
+    list-style: none;
+}
+
+li {
+    color: maroon;
+    background: whitesmoke;
+    padding: 5px;
     border-radius: 5px;
 }
 
-h2 {
-    font-size: 300%;
-    background: grey;
-    display: flex;
-    justify-content: center;
+.logo img {
+    height: 135px;
+    width: 135px;
+    border-radius: 100%;
+    border: 1px solid black;
+    margin: 5px;
 }
 
-p {
-    display: flex;
-    justify-content: space-evenly;
-}
+a:link {
+    text-decoration: none;
+    color: Maroon;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: Maroon;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
+    font-size: 110%;
+  }
+
+  button {
+    cursor:pointer;
+  }
+

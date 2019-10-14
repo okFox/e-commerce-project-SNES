@@ -43,8 +43,6 @@ export function calcOrderTotal(fullCartData, gameList){
 
         const lineTotal = calcLineTotal(eachLine.quantity, game.price);
 
-        
-
         orderTotal += lineTotal;
     }
     return orderTotal;
